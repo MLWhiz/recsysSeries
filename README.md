@@ -20,11 +20,14 @@ recsysSeries/
 │   │   └── gru4rec-steam-dataset.ipynb
 │   └── sasrec/
 │       └── sasrec-on-steam-games.ipynb
-└── 4. Semantic Ids/
-    ├── semantic-ids-steam-1-rqvae.ipynb
-    ├── semantic-ids-steam-2-sasrec.ipynb
-    ├── semantic-ids-steam-3-semantic-sasrec.ipynb
-    └── semantic-ids-steam-4-tiger.ipynb
+├── 4. Semantic Ids/
+│   ├── semantic-ids-steam-1-rqvae.ipynb
+│   ├── semantic-ids-steam-2-sasrec.ipynb
+│   ├── semantic-ids-steam-3-semantic-sasrec.ipynb
+│   └── semantic-ids-steam-4-tiger.ipynb
+└── 5. HSTU/
+    ├── hstu-from-scratch-ml1m.ipynb
+    └── rectools-hstu-ml1m.ipynb
 ```
 
 ## Tutorials
@@ -74,7 +77,7 @@ Both are trained and evaluated on the Steam Games dataset.
 **Notebooks:** `4. Semantic Ids/`
 
 **Blog post:**
-- [From RNNs to Transformers: Building Sequential Recommenders (Part 2)](https://www.mlwhiz.com/p/rnns-to-transformers-sequential-recommenders) — Semantic IDs, TIGER, HSTU, and generative recommenders in production
+- [From Random IDs to Semantic IDs: Building a Generative Recommender from Scratch](https://www.mlwhiz.com/p/semantic-ids-rqvae-generative-recommender) — RQ-VAE and TIGER on the Steam Games dataset with Qwen embeddings
 
 A four-part implementation series on generative recommendation using semantic IDs on the Steam Games dataset:
 
@@ -87,15 +90,40 @@ Semantic IDs replace arbitrary interaction-dependent item IDs with content-aware
 
 ---
 
+### 5. HSTU
+
+**Notebooks:** `5. HSTU/`
+
+**Blog posts:**
+- [HSTU: How Meta Built a Trillion-Parameter Recommender That Actually Scales](https://www.mlwhiz.com/p/hstu-how-meta-built-a-trillion-parameter) — the architecture, the math, and why it scales
+- [HSTU From Scratch in PyTorch - A complete Walkthrough](https://www.mlwhiz.com/p/hstu-from-scratch-in-pytorch-a-complete) — data pipeline, the three sub-layers, retrieval + rating loss, and a benchmark against RecTools' HSTU
+
+- **From scratch** (`hstu-from-scratch-ml1m.ipynb`) — HSTU in plain PyTorch, trained on MovieLens-1M (small config, runs on a free Colab T4)
+- **RecTools baseline** (`rectools-hstu-ml1m.ipynb`) — the RecTools HSTU and SASRec on the same data and split, used as the comparison numbers
+
+---
+
+### Posts without notebooks
+
+These posts are conceptual or system-design pieces, so there is no code for them: Vector Search at Scale, From Candidates to Clicks, 3 Modern Approaches to Cold Start, and the Reranking post.
+
+---
+
 ## Blog Series
 
 All notebooks accompany the **mlwhiz.com RecSys Series**:
 
 | # | Post | Topic |
 |---|------|-------|
-| 1 | [RecSys Fundamentals](https://www.mlwhiz.com/p/the-recommenders-playbook-algorithms) | Content-based & collaborative filtering |
-| 2 | [How RecSys Learned to Think](https://www.mlwhiz.com/p/the-algorithmic-journey-of-recommender) | Algorithmic history & matrix factorization |
-| 3 | [The 3-Stage Funnel](https://www.mlwhiz.com/p/the-recommendation-engine-under-the) | Retrieval → ranking → re-ranking pipeline |
-| 4 | [YouTube-Scale Two-Tower](https://www.mlwhiz.com/p/building-youtube-scale-recommendation) | Two-Tower models, in-batch negatives, ANN |
-| 5 | [Sequential Recommenders Part 1](https://www.mlwhiz.com/p/rnns-to-transformers-sequential-recommenders) | GRU4Rec, SASRec on Steam Games |
-| 6 | Sequential Recommenders Part 2 *(coming soon)* | Semantic IDs, TIGER, HSTU |
+| 1 | [RecSys Fundamentals: The Art and Science of Digital Matchmaking](https://www.mlwhiz.com/p/the-recommenders-playbook-algorithms) | Content-based & collaborative filtering |
+| 2 | [How Recommendation Systems Learned to Think](https://www.mlwhiz.com/p/the-algorithmic-journey-of-recommender) | From collaborative filtering to generative AI |
+| 3 | [The 3-Stage Funnel Behind Every Modern Recommender System](https://www.mlwhiz.com/p/the-recommendation-engine-under-the) | Two-Tower, vector databases, cross-encoders |
+| 4 | [How YouTube Finds Your Next Video in Milliseconds](https://www.mlwhiz.com/p/building-youtube-scale-recommendation) | Two-tower retrieval, in-batch negatives |
+| 5 | [Vector Search at Scale: The Production Engineer's Guide](https://www.mlwhiz.com/p/vector-search-at-scale-the-missing) | IVF, PQ, 100M-vector search |
+| 6 | [From Candidates to Clicks: The Engineering Anatomy of Ranking](https://www.mlwhiz.com/p/from-candidates-to-clicks-the-engineering) | Ranking from 1,000 candidates to one item |
+| 7 | [3 Modern Approaches to Solving Cold Start in RecSys](https://www.mlwhiz.com/p/cold-start-problem-recsys-modern-approaches) | Bandits, meta-learning, LLMs |
+| 8 | [Your Ranking Model Is Right. Your Recommendations Are Wrong](https://www.mlwhiz.com/p/reranking-recsys-diversity-freshness) | Diversity, freshness, business constraints |
+| 9 | [From RNNs to Transformers: Building Sequential Recommenders (Part 1)](https://www.mlwhiz.com/p/rnns-to-transformers-sequential-recommenders) | GRU4Rec and SASRec on Steam Games |
+| 10 | [From Random IDs to Semantic IDs: Building a Generative Recommender from Scratch](https://www.mlwhiz.com/p/semantic-ids-rqvae-generative-recommender) | RQ-VAE and TIGER on Steam Games |
+| 11 | [HSTU: How Meta Built a Trillion-Parameter Recommender That Actually Scales](https://www.mlwhiz.com/p/hstu-how-meta-built-a-trillion-parameter) | HSTU architecture and scaling |
+| 12 | [HSTU From Scratch in PyTorch - A complete Walkthrough](https://www.mlwhiz.com/p/hstu-from-scratch-in-pytorch-a-complete) | PyTorch implementation on MovieLens-1M |
