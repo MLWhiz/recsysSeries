@@ -11,24 +11,45 @@ This repository contains hands-on implementations accompanying the [mlwhiz.com R
 ```
 recsysSeries/
 ├── 1. Recsys Fundamentals/
+│   ├── README.md
 │   ├── 1. ContentBased.ipynb
 │   └── 2. Collaborative Filtering.ipynb
 ├── 2. Two Tower/
+│   ├── README.md
+│   ├── code-snippets.md
 │   └── two-tower-network-with-temperature-and-logq.ipynb
 ├── 3. Sequential Recommenders/
+│   ├── README.md
 │   ├── gru4rec/
 │   │   └── gru4rec-steam-dataset.ipynb
 │   └── sasrec/
 │       └── sasrec-on-steam-games.ipynb
 ├── 4. Semantic Ids/
+│   ├── README.md
 │   ├── semantic-ids-steam-1-rqvae.ipynb
 │   ├── semantic-ids-steam-2-sasrec.ipynb
 │   ├── semantic-ids-steam-3-semantic-sasrec.ipynb
 │   └── semantic-ids-steam-4-tiger.ipynb
-└── 5. HSTU/
-    ├── hstu-from-scratch-ml1m.ipynb
-    └── rectools-hstu-ml1m.ipynb
+├── 5. HSTU/
+│   ├── README.md
+│   ├── code-snippets.md
+│   ├── hstu-from-scratch-ml1m.ipynb
+│   └── rectools-hstu-ml1m.ipynb
+├── 6. Vector Search at Scale/
+│   ├── README.md
+│   └── code-snippets.md
+├── 7. Ranking/
+│   ├── README.md
+│   └── code-snippets.md
+├── 8. Cold Start/
+│   ├── README.md
+│   └── code-snippets.md
+└── 9. Reranking/
+    ├── README.md
+    └── code-snippets.md
 ```
+
+Each folder has a README with a summary of its posts.
 
 ## Tutorials
 
@@ -105,7 +126,9 @@ Semantic IDs replace arbitrary interaction-dependent item IDs with content-aware
 
 ### Posts without notebooks
 
-These posts are conceptual or system-design pieces, so there is no code for them: Vector Search at Scale, From Candidates to Clicks, 3 Modern Approaches to Cold Start, and the Reranking post.
+Four posts are system-design pieces with no notebook: Vector Search at Scale, From Candidates to Clicks, 3 Modern Approaches to Cold Start, and the Reranking post. Each has its own folder (`6. Vector Search at Scale/`, `7. Ranking/`, `8. Cold Start/`, `9. Reranking/`) with a README summary and a `code-snippets.md` file. The snippet files hold the code blocks from the post, in order. They are fragments, not runnable notebooks.
+
+Two more posts have no notebook either: The 3-Stage Funnel (in `2. Two Tower/`) and HSTU: How Meta Built a Trillion-Parameter Recommender (in `5. HSTU/`). Their folders also have a `code-snippets.md`.
 
 ---
 
