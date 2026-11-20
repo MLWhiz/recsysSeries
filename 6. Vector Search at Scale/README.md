@@ -22,4 +22,4 @@ The rest covers four ways to combine filters with vector search, libraries versu
 - Benchmark on realistic queries, against exact ground truth, and report p95 and p99 latency, not only averages.
 - Choose the tool by scale: libraries under about 10M vectors, self-hosted above that, managed for small teams.
 
-**Code:** [code-snippets.md](code-snippets.md) has the post's FAISS and NumPy fragments. They are not a runnable notebook.
+**Code:** [vector-search.ipynb](vector-search.ipynb) is a runnable notebook covering brute force, IVF, PQ and IVF-PQ, each with an educational from-scratch implementation and an optimised FAISS one. [code-snippets.md](code-snippets.md) has the post's FAISS and NumPy fragments.
